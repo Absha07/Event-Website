@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>Document</title>
+    <script type="module" src="firebase-event.js"></script>
+</head>
+
+<body>
+    <!-- <navbar> -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#event">Events</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="regis.html">Register</a></li>
+        </ul>
+        <ul class="line">
+            <li><a href="#">Home</a></li>
+            <li><a class="hideOnMobile" href="#about">About</a></li>
+            <li>
+                <a class="hideOnMobile" href="#event">Events</a>
+            </li>
+            <li><a class="hideOnMobile" href="#footer">Contact</a></li>
+            <li><a class="hideOnMobile" href="regis.html">Register</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- hero -->
+
+    <section class="home" id=" Home">
+        <h1 class=" ">ICON 24</h1>
+        <p>Inter- National Symposium</p>
+    </section>
+
+    <!-- About me Section -->
+    <section class="about" id="about">
+        <div class="title">
+            <h2>About</h2>
+        </div>
+        <div class="abtimage">
+            <div class="abtimg">
+                <img class="img" src="./img/clg.jpeg" />
+            </div>
+            <div class="aboutpara">
+                <p class="abtpara">
+                    Our annual department event is a celebration of creativity, innovation, and collaboration. Students
+                    from various departments come together to showcase their talents and projects.
+                    <br>
+                    This year's event features a series of workshops, seminars, and competitions designed to inspire and
+                    challenge participants. Whether you're interested in technology, arts, or sports, there's something
+                    for everyone!
+                </p>
+            </div>
+        </div>
+        <section class="countdown-container">
+            <div class="countdown-inner">
+                <div class="time-box">
+                    <h2 id="days">00</h2>
+                    <h4>DAYS</h4>
+                </div>
+                <div class="time-box">
+                    <h2 id="hours">00</h2>
+                    <h4>HOURS</h4>
+                </div>
+                <div class="time-box">
+                    <h2 id="minutes">00</h2>
+                    <h4>MINUTES</h4>
+                </div>
+                <div class="time-box">
+                    <h2 id="seconds">00</h2>
+                    <h4>SECONDS</h4>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- <Time> -->
+
+
+
+    <!-- <events> -->
+
+    <section class="event" id="event">
+        <h1>Technical Events</h1>
+
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img1.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>Hackathon</h1>
+                </div>
+                <div class="card-text">
+                    <p>To develop a prototype or solution to a given problem.</p>
+                </div>
+                <a class="read-more" href="event/event1.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img2.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>Code Gulf</h1>
+                </div>
+                <div class="card-text">
+                    <p>To encourage concise and efficient coding.</p>
+                </div>
+                <a class="read-more" href="event/event2.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img3.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>AlgoMaster Clash</h1>
+                </div>
+                <div class="card-text">
+                    <p>
+                        To design and implement efficient algorithms to solve the
+                        problems.
+                    </p>
+                </div>
+                <a class="read-more" href="event/event3.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img4.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>CyberQuest CTF</h1>
+                </div>
+                <div class="card-text">
+                    <p>
+                        To simulate real-world security problems and improve participants'
+                        cybersecurity skills.
+                    </p>
+                </div>
+                <a class="read-more" href="event/event4.html">Read More</a>
+            </div>
+        </div>
+        <h1>Non-Technical Events</h1>
+
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img5.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>TechnoTrivia Showdown</h1>
+                </div>
+                <div class="card-text">
+                    <p>
+                        To test participants' knowledge and awareness of the tech world.
+                    </p>
+                </div>
+                <a class="read-more" href="event/event5.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img6.webp" />
+                </div>
+                <div class="card-details">
+                    <h1>TechTalks Debate Duel</h1>
+                </div>
+                <div class="card-text">
+                    <p>To develop critical thinking and public speaking skills.</p>
+                </div>
+                <a class="read-more" href="event/event6.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img7.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>Innovators Insight Forum</h1>
+                </div>
+                <div class="card-text">
+                    <p>
+                        To provide participants with knowledge and inspiration from
+                        professionals.
+                    </p>
+                </div>
+                <a class="read-more" href="event/event7.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <div class="card-img">
+                    <img src="img/img8.jpg" />
+                </div>
+                <div class="card-details">
+                    <h1>Futurist Vision Expo</h1>
+                </div>
+                <div class="card-text">
+                    <p>To encourage research and communication skills.</p>
+                </div>
+                <a class="read-more" href="event/event8.html">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <sponser> -->
+
+    <section class="showcase-section">
+        <h2>SPONSERS</h2>
+        <div class="showcase__carousel--container">
+            <i class="fa fa-chevron-left"></i>
+            <div class="showcase__carousel--content">
+                <div class="showcase__carousel--item">
+                    <div>
+                        <p class="showcase__carousel--para">Main Sponsor</p>
+                    </div>
+                    <img src="img/spon1.webp" alt="Main Sponsor" class="showcase__carousel--image" />
+                </div>
+                <div class="showcase__carousel--item">
+                    <div>
+                        <p class="showcase__carousel--para">Main Sponsor</p>
+                    </div>
+                    <img src="img/spon4.jpeg" alt="Main Sponsor" class="showcase__carousel--image" />
+                </div>
+                <div class="showcase__carousel--item">
+                    <div>
+                        <p class="showcase__carousel--para">Main Sponsor</p>
+                    </div>
+                    <img src="img/spon3.jpg" alt="Main Sponsor" class="showcase__carousel--image" />
+                </div>
+                <div class="showcase__carousel--item">
+                    <div>
+                        <p class="showcase__carousel--para">Main Sponsor</p>
+                    </div>
+                    <img src="img/spon5.png" alt="Main Sponsor" class="showcase__carousel--image" />
+                </div>
+                <div class="showcase__carousel--item">
+                    <div>
+                        <p class="showcase__carousel--para">Main Sponsor</p>
+                    </div>
+                    <img src="img/spon6.png" alt="Main Sponsor" class="showcase__carousel--image" />
+                </div>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </section>
+
+    <!-- <footer> -->
+
+    <footer class="foot">
+        <section id="footer" class="footer">
+            <div class="container">
+                <div class="footer-links">
+                    <div class="links-section">
+                        <div class="section-title">Quick Links</div>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/#about">About</a></li>
+                            <li><a href="/#event">Events</a></li>
+                            <li><a href="/#footer">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-section">
+                        <div class="section-title">External Links</div>
+                        <ul>
+                            <li>
+                                <a href="https://g.co/kgs/EL2W6dG" target="_top">Map</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/icon_2k24/" target="_blank"
+                                    rel="noreferrer">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/9363396122" target="_blank" rel="noreferrer">Whatsapp</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="links-section">
+                        <div class="section-title">Co-ordinators</div>
+                        <ul>
+                            <li>
+                                <p>Mr. Absha Abdulla</p>
+                                <a href="tel:9841926614">9841926614</a>
+                            </li>
+                            <li>
+                                <p>Mr. Mohammed Basha</p>
+                                <a href="tel:9363396122">9363396122</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "flex";
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "none";
+        }
+
+        document
+            .querySelector(".fa-chevron-left")
+            .addEventListener("click", () => {
+                document.querySelector(".showcase__carousel--content").scrollBy({
+                    left: -500,
+                    behavior: "smooth",
+                });
+            });
+
+        document
+            .querySelector(".fa-chevron-right")
+            .addEventListener("click", () => {
+                document.querySelector(".showcase__carousel--content").scrollBy({
+                    left: 500,
+                    behavior: "smooth",
+                });
+            });
+        const timer = () => {
+            const eventDate = new Date("Aug 27, 2024 00:00:00").getTime();
+            const now = new Date().getTime();
+            const gap = eventDate - now;
+
+            if (gap > 0) {
+                const second = 1000;
+                const minute = second * 60;
+                const hour = minute * 60;
+                const day = hour * 24;
+
+                const remDay = Math.floor(gap / day);
+                const remHour = Math.floor((gap % day) / hour);
+                const remMinute = Math.floor((gap % hour) / minute);
+                const remSecond = Math.floor((gap % minute) / second);
+
+                document.getElementById("days").innerText = remDay;
+                document.getElementById("hours").innerText = remHour;
+                document.getElementById("minutes").innerText = remMinute;
+                document.getElementById("seconds").innerText = remSecond;
+            }
+        };
+
+        setInterval(timer, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="regis.css">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCQ220RPba8nR2zmT85TEYACEC2t0f4YfA",
+            authDomain: "icon-e9ef3.firebaseapp.com",
+            projectId: "icon-e9ef3",
+            storageBucket: "icon-e9ef3.appspot.com",
+            messagingSenderId: "1025401287740",
+            appId: "1:1025401287740:web:20d9159690485abd5f3f39",
+            measurementId: "G-J56EVG67MB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        document.getElementById('sign-up-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-pass').value;
+            const repeatPassword = document.getElementById('signup-repeat-pass').value;
+            const username = document.getElementById('signup-user').value;
+
+            if (password !== repeatPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                await setDoc(doc(db, "users", user.uid), {
+                    username: username,
+                    email: email
+                });
+
+                alert("User registered successfully!");
+            } catch (error) {
+                console.error("Error during registration: ", error);
+                alert(`Error: ${error.message}`);
+            }
+        });
+
+        document.getElementById('sign-in-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('signin-email').value;
+            const password = document.getElementById('signin-pass').value;
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                alert("User signed in successfully!");
+            } catch (error) {
+                console.error("Error during sign-in: ", error);
+                alert(`Error: ${error.message}`);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form id="sign-in-form">
+                        <div class="group">
+                            <label for="signin-email" class="label">Email</label>
+                            <input id="signin-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signin-pass" class="label">Password</label>
+                            <input id="signin-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up-htm">
+                    <form id="sign-up-form">
+                        <div class="group">
+                            <label for="signup-user" class="label">Username</label>
+                            <input id="signup-user" type="text" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-pass" class="label">Password</label>
+                            <input id="signup-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-repeat-pass" class="label">Repeat Password</label>
+                            <input id="signup-repeat-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-email" class="label">Email Address</label>
+                            <input id="signup-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="regis.css">
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCQ220RPba8nR2zmT85TEYACEC2t0f4YfA",
+            authDomain: "icon-e9ef3.firebaseapp.com",
+            projectId: "icon-e9ef3",
+            storageBucket: "icon-e9ef3.appspot.com",
+            messagingSenderId: "1025401287740",
+            appId: "1:1025401287740:web:20d9159690485abd5f3f39",
+            measurementId: "G-J56EVG67MB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Registration form submission handler
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('sign-up-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+                
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-pass').value;
+                const repeatPassword = document.getElementById('signup-repeat-pass').value;
+                const username = document.getElementById('signup-user').value;
+
+                if (password !== repeatPassword) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+
+                try {
+                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                    const user = userCredential.user;
+
+                    await setDoc(doc(db, "users", user.uid), {
+                        username: username,
+                        email: email
+                    });
+
+                    alert("User registered successfully!");
+                    window.location.href = 'index.html'; // Redirect to index.html
+                } catch (error) {
+                    console.error("Error during registration: ", error);
+                    alert(`Error: ${error.message}`);
+                }
+            });
+
+            // Sign-in form submission handler
+            document.getElementById('sign-in-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const email = document.getElementById('signin-email').value;
+                const password = document.getElementById('signin-pass').value;
+
+                try {
+                    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                    const user = userCredential.user;
+
+                    alert("User signed in successfully!");
+                    window.location.href = 'index.html'; // Redirect to index.html
+                } catch (error) {
+                    console.error("Error during sign-in: ", error);
+                    alert(`Error: ${error.message}`);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up">
+            <label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form id="sign-in-form">
+                        <div class="group">
+                            <label for="signin-email" class="label">Email</label>
+                            <input id="signin-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signin-pass" class="label">Password</label>
+                            <input id="signin-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up-htm">
+                    <form id="sign-up-form">
+                        <div class="group">
+                            <label for="signup-user" class="label">Username</label>
+                            <input id="signup-user" type="text" class="input" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-pass" class="label">Password</label>
+                            <input id="signup-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-repeat-pass" class="label">Repeat Password</label>
+                            <input id="signup-repeat-pass" type="password" class="input" data-type="password" required>
+                        </div>
+                        <div class="group">
+                            <label for="signup-email" class="label">Email Address</label>
+                            <input id="signup-email" type="email" class="input" required>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

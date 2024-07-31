@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech It Out - Event</title>
+    <link rel="stylesheet" href="event1.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>ICON24</h1>
+        <h2>TECH IT OUT</h2>
+        <div class="buttons">
+          <button onclick="goBack()">Go Back</button>
+          <button onclick="getTickets()">Join</button>
+        </div>
+      </header>
+      <section class="content">
+        <div class="image">
+          <img src="../img/img5.jpg" alt="Tech It Out" />
+        </div>
+        <div class="details">
+          <h3>EVENT INTRODUCTION</h3>
+          <p>
+            TechnoTrivia Showdown is a quiz competition that tests participants'
+            knowledge and awareness of the tech world. Questions cover various
+            topics, including technology history, current trends, and
+            significant innovations, offering a fun and educational experience.
+          </p>
+
+          <h3>TEAM SIZE :</h3>
+          <p>1-2</p>
+
+          <h3>REGISTRATION DEADLINE</h3>
+          <p>20 july</p>
+
+          <h3>REGISTRATION FEES</h3>
+          <p>₹400</p>
+
+          <h3>ELIGIBILITY</h3>
+          <p>Open to all students from any background with valid ID cards.</p>
+
+          <h3>FOR QUERIES</h3>
+          <p>
+            Mr. Absha - 1234567890<br />
+            Mr. Abdulla - 1234567890
+          </p>
+
+          <div class="date">
+            <p>July 26th & 27th, 2024</p>
+            <button onclick="viewRulebook()">Rulebook</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function getTickets() {
+        window.location.href = "tickets.html";
+      }
+
+      function viewRulebook() {
+        window.location.href = "rulebook.pdf";
+      }
+    </script>
+  </body>
+</html>

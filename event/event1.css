@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("../img/back.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #00FFFF;
+}
+
+header h2 {
+    color: #FFFFFF;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.buttons button {
+    background-color: #00FFFF;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+section.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.content .image {
+    margin: 20px 0;
+    width: 600px;
+}
+
+section.content .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+section.content .details {
+    max-width: 600px;
+    text-align: left;
+}
+
+section.content .details h3 {
+    color: #00FFFF;
+}
+
+section.content .details p {
+    margin: 10px 0;
+}
+
+section.content .date {
+    margin: 20px 0;
+}
+
+section.content .date p {
+    color: #00FFFF;
+}
+
+section.content .date button {
+    background-color: #00FFFF;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
